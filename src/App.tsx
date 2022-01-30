@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/Navigator/NavBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import { useMemo, useState } from "react";
+import GlobalContext from "./context";
+import { initialState } from "./initialState";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import MainPage from "./pages/main";
+import CategoryPage from "./pages/category";
+import CreatePage from "./pages/Create";
+
+const App = () => {
+  const [state, setState] = useState(initialState);
+  const providerValue: any = useMemo(
+    () => ({ state, setState }),
+    [state, setState]
   );
-}
+
+  return (
+    <GlobalContext.Provider value={providerValue}>
+      <Router>
+        <NavBar />
+
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/category/:title" element={<CategoryPage />} />
+          <Route path="/create" element={<CreatePage />} />
+        </Routes>
+      </Router>
+    </GlobalContext.Provider>
+  );
+};
 
 export default App;
