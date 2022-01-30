@@ -3,12 +3,9 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
   ModalProps,
-  Button,
 } from "@chakra-ui/react";
 
 export interface IBaseModalProps extends ModalProps {}

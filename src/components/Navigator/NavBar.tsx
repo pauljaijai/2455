@@ -1,5 +1,5 @@
 import { Box, Icon } from "@chakra-ui/react";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import GlobalContext from "../../context";
 import AuthButtonGroup from "../ButtonGroup/Auth";
 import AuthModal from "../Modal/Auth";

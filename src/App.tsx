@@ -3,7 +3,7 @@ import NavBar from "./components/Navigator/NavBar";
 import { useMemo, useState } from "react";
 import GlobalContext from "./context";
 import { initialState } from "./initialState";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/main";
 import CategoryPage from "./pages/category";
 import CreatePage from "./pages/Create";

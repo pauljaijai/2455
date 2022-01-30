@@ -1,10 +1,4 @@
-import {
-  Button,
-  Center,
-  ModalBody,
-  ModalCloseButton,
-  Text,
-} from "@chakra-ui/react";
+import { Button, Center, ModalBody, ModalCloseButton } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { auth, GoogleProvider } from "../../Services/firebase/config";
 import BaseModal, { IBaseModalProps } from "./Base";

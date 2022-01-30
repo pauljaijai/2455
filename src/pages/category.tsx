@@ -1,5 +1,5 @@
-import { Text, Wrap, WrapItem } from "@chakra-ui/react";
-import { collection, doc, onSnapshot } from "firebase/firestore";
+import { Wrap, WrapItem } from "@chakra-ui/react";
+import { collection, onSnapshot } from "firebase/firestore";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
@@ -18,7 +18,7 @@ const CategoryPage: React.FunctionComponent<any> = () => {
     return () => {
       unSub();
     };
-  }, []);
+  }, [params.title]);
 
   return (
     <Wrap margin={"2rem"}>

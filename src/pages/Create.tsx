@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { db } from "../Services/firebase/config";
 import { useContext } from "react";
 import GlobalContext from "../context";
@@ -30,16 +30,16 @@ const CreatePage: React.FunctionComponent = () => {
   const navigate = useNavigate();
 
   const [form, setForm] = useState(initialForm);
-  const { state, setState } = useContext(GlobalContext);
+  const { state } = useContext(GlobalContext);
   const handleChange = (e: any) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   useEffect(() => {
-    if (state.user != true) {
+    if (state.user !== true) {
       navigate("/");
     }
-  }, []);
+  }, [state.user]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();

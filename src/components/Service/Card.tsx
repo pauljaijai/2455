@@ -1,6 +1,6 @@
 import { Box, Button, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 import ServiceModal from "../Modal/Service";
 
 const ServiceCard: React.FunctionComponent<any> = ({
