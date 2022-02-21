@@ -35,7 +35,7 @@ const ServiceModal: React.FunctionComponent<any> = ({
           <ModalHeader color={"teal"} marginTop={"10"}>
             Basic
           </ModalHeader>
-          <Text>{BasicValue}</Text>
+          <Text whiteSpace={"pre-wrap"}>{BasicValue}</Text>
           <Box float={"right"} colorScheme="teal" variant="solid">
             <Button backgroundColor={"teal"}>{`Buy ${BasicPrice}`}</Button>
           </Box>
@@ -43,7 +43,7 @@ const ServiceModal: React.FunctionComponent<any> = ({
           <ModalHeader color={"red.600"} marginTop={"10"}>
             Advance
           </ModalHeader>
-          <Text>{AdvanceValue}</Text>
+          <Text whiteSpace={"pre-wrap"}>{AdvanceValue}</Text>
           <Box float={"right"} colorScheme="teal" variant="solid">
             <Button backgroundColor={"red.600"}>{`Buy ${AdvancePrice}`}</Button>
           </Box>
@@ -51,7 +51,7 @@ const ServiceModal: React.FunctionComponent<any> = ({
           <ModalHeader color={"purple.300"} marginTop={"10"}>
             Premium
           </ModalHeader>
-          <Text>{PremiumValue.split("\n")}</Text>
+          <Text whiteSpace={"pre-wrap"}>{PremiumValue}</Text>
 
           <Box float={"right"} colorScheme="teal" variant="solid">
             <Button backgroundColor={"purple.300"}>
