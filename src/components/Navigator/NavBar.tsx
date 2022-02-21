@@ -1,5 +1,6 @@
 import { Box, Icon } from "@chakra-ui/react";
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import GlobalContext from "../../context";
 import AuthButtonGroup from "../ButtonGroup/Auth";
 import AuthModal from "../Modal/Auth";
@@ -21,7 +22,7 @@ const NavBar = () => {
       <AuthModal isOpen={state.isAuthOpen} onClose={onAuthClose}>
         {}
       </AuthModal>
-      <Icon />
+      <Link to={"/"}>WANTED</Link>
       <AuthButtonGroup />
     </Box>
   );
