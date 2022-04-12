@@ -22,7 +22,7 @@ const NavBar = () => {
       <AuthModal isOpen={state.isAuthOpen} onClose={onAuthClose}>
         {}
       </AuthModal>
-      <Link to={"/"}>WANTED</Link>
+      <Link to={"/"}>Service Hub</Link>
       <AuthButtonGroup />
     </Box>
   );
